@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello SettingsController!{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-5">
+            <div class="card card-default">
+                <div class="card-header">
+                    <h3 class="card-title">Ссылки (route)</h3>
+                </div>
+                <div class="card-body">
+                    {{ form_start(routeForm) }}
+                    <div class="row">
+
+
+                        <div class="col-5">
+                            {{ form_row(routeForm.name) }}
+                        </div>
+                        <div class="col-4">
+                            {{ form_row(routeForm.url) }}
+
+                        </div>
+
+                        <div class="col-3">
+                            <button id="route_btn" class="form-control btn btn-success">Сохранить</button>
+                        </div>
+
+                    </div>
+                    {{ form_end(routeForm) }}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
